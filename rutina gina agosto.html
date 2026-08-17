@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Rutina Gina · Agosto 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{background:#0f0f0f;color:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;padding-bottom:80px}
+header{padding:16px 16px 10px;border-bottom:1px solid #222;position:sticky;top:0;background:#0f0f0f;z-index:10}
+.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.logo{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#c8f55a}
+.mes{font-size:11px;color:#555}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:6px 16px;border-radius:20px;border:1.5px solid #222;background:transparent;color:#555;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.tab.on{background:#c8f55a;color:#0f0f0f;border-color:#c8f55a}
+.day{display:none;padding:14px 14px 0}
+.day.on{display:block}
+.prog{margin-bottom:18px}
+.prog-row{display:flex;justify-content:space-between;margin-bottom:5px;font-size:11px}
+.prog-row span:last-child{color:#c8f55a;font-weight:700}
+.prog-row span:first-child{color:#555}
+.bar-bg{background:#222;border-radius:3px;height:3px;overflow:hidden}
+.bar{height:100%;background:#c8f55a;border-radius:3px;transition:width .3s}
+.blk{display:flex;align-items:center;gap:8px;margin:18px 0 8px}
+.blk-i{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.blk-t{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.A .blk-i{background:rgba(245,90,140,.15);color:#f55a8c}.A .blk-t{color:#f55a8c}
+.B .blk-i{background:rgba(90,180,245,.15);color:#5ab4f5}.B .blk-t{color:#5ab4f5}
+.C .blk-i{background:rgba(245,163,90,.15);color:#f5a35a}.C .blk-t{color:#f5a35a}
+.D .blk-i{background:rgba(160,90,245,.15);color:#a05af5}.D .blk-t{color:#a05af5}
+.card{background:#1c1c1c;border:1px solid #222;border-radius:13px;padding:11px 13px 10px;margin-bottom:7px}
+.card.done{opacity:.42}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;gap:8px}
+.ex-left{display:flex;align-items:center;gap:8px;min-width:0}
+.num{font-size:11px;font-weight:700;color:#444;flex-shrink:0}
+.name{font-size:14px;font-weight:600;line-height:1.3}
+.card.done .name{text-decoration:line-through;color:#555}
+.badge{flex-shrink:0;padding:3px 8px;background:rgba(255,255,255,.06);color:#555;font-size:11px;font-weight:700;border-radius:20px;white-space:nowrap}
+.card-bot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sets{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.s{width:34px;height:34px;border-radius:9px;border:1.5px solid #222;background:transparent;color:#555;font-size:12px;font-weight:800;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.s.on{border-color:#c8f55a;background:rgba(200,245,90,.13);color:#c8f55a;font-size:14px}
+.slbl{font-size:11px;color:#444}
+.ww{display:flex;align-items:center;gap:4px}
+.wi{width:48px;background:#111;border:1px solid #222;border-radius:7px;color:#f0f0f0;font-size:13px;font-weight:600;text-align:center;padding:5px 3px;font-family:inherit;outline:none}
+.wlbl{font-size:11px;color:#444}
+.abs{background:rgba(255,255,255,.03);border:1px dashed #222;border-radius:11px;padding:10px;margin-bottom:7px;font-size:12px;color:#555;text-align:center;font-style:italic}
+.rst{display:block;margin:24px auto 0;padding:10px 24px;background:transparent;border:1.5px solid #222;border-radius:22px;color:#555;font-size:13px;font-family:inherit;font-weight:600;cursor:pointer}
+#tmr{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1c1c1c;border:1px solid #333;border-radius:16px;padding:12px 18px;align-items:center;gap:12px;z-index:99;box-shadow:0 8px 28px rgba(0,0,0,.7);min-width:220px}
+#tmr.on{display:flex}
+.tring{position:relative;width:42px;height:42px;flex-shrink:0}
+.tface{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#c8f55a}
+.ttitle{font-size:13px;font-weight:700}
+.tsub{font-size:11px;color:#555;margin-top:2px}
+.tskip{background:rgba(255,255,255,.07);border:none;border-radius:7px;color:#666;font-size:12px;font-weight:600;padding:5px 9px;cursor:pointer;font-family:inherit}
+</style>
+</head>
+<body>
+<header>
+  <div class="row">
+    <span class="logo">Rutina Gina</span>
+    <span class="mes">Agosto 2026</span>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+<div id="cont"></div>
+
+<div id="tmr">
+  <div class="tring">
+    <svg width="42" height="42" style="transform:rotate(-90deg)">
+      <circle cx="21" cy="21" r="17" fill="none" stroke="#333" stroke-width="3"/>
+      <circle id="tarc" cx="21" cy="21" r="17" fill="none" stroke="#c8f55a" stroke-width="3"
+        stroke-dasharray="106.8" stroke-dashoffset="106.8" stroke-linecap="round"
+        style="transition:stroke-dashoffset 1s linear"/>
+    </svg>
+    <div class="tface" id="tface">1:30</div>
+  </div>
+  <div style="flex:1">
+    <div class="ttitle">Descanso</div>
+    <div class="tsub" id="tsub"></div>
+  </div>
+  <button class="tskip" onclick="stopT()">Saltar</button>
+</div>
+
+<script>
+var D=[
+  {l:"Día 1",b:[
+    {k:"A",d:"Activación · 3×8-12",e:[
+      {n:"A1",nm:"Front Foot Elevated Split Squat",s:3,r:"8-10"},
+      {n:"A2",nm:"Neutral Grip Pulldown",s:3,r:"8-10"},
+      {n:"A3",nm:"Cable Flies",s:3,r:"10-12"}
+    ]},
+    {k:"B",d:"Fuerza principal · 6×4",e:[
+      {n:"B1",nm:"Front Squat",s:6,r:"4"},
+      {n:"B2",nm:"Chin-Ups",s:6,r:"4"}
+    ]},
+    {k:"C",d:"Accesorios · 3×8-10",e:[
+      {n:"C1",nm:"Heels Elevated Squats",s:3,r:"8-10"},
+      {n:"C2",nm:"Leg Curl",s:3,r:"8-10"}
+    ]},
+    {k:"D",d:"Brazos + Core · 3×8-12",abs:1,e:[
+      {n:"D1",nm:"Incline DB Curl",s:3,r:"8-10"},
+      {n:"D2",nm:"Rope Press Down",s:3,r:"10-12"}
+    ]}
+  ]},
+  {l:"Día 2",b:[
+    {k:"A",d:"Activación · 3×8-10",e:[
+      {n:"A1",nm:"King Deadlift",s:3,r:"8-10"},
+      {n:"A2",nm:"Incline DB Press",s:3,r:"8-10"},
+      {n:"A3",nm:"T-Bar Row (agarre estrecho)",s:3,r:"8-10"}
+    ]},
+    {k:"B",d:"Fuerza principal · 6×4-8",e:[
+      {n:"B1",nm:"RDL",s:6,r:"4"},
+      {n:"B2",nm:"DB Row",s:6,r:"8"}
+    ]},
+    {k:"C",d:"Accesorios · 3×5-15",e:[
+      {n:"C1",nm:"Nordic Curl",s:3,r:"5-6"},
+      {n:"C2",nm:"Leg Extension",s:3,r:"12-15"},
+      {n:"C3",nm:"Peck Deck Flies",s:3,r:"12-15"}
+    ]},
+    {k:"D",d:"Brazos + Core · 3×8-15",abs:1,e:[
+      {n:"D1",nm:"Hammer Curl",s:3,r:"8-10"},
+      {n:"D2",nm:"Close Grip Push Up",s:3,r:"10-15"}
+    ]}
+  ]},
+  {l:"Día 3",b:[
+    {k:"A",d:"Activación · 3×8-12",e:[
+      {n:"A1",nm:"Reverse Lunge",s:3,r:"8-10"},
+      {n:"A2",nm:"Cross Over",s:3,r:"10-12"},
+      {n:"A3",nm:"Pullover",s:3,r:"10-12"}
+    ]},
+    {k:"B",d:"Fuerza principal · 6×4",e:[
+      {n:"B1",nm:"Back Squat",s:6,r:"4"},
+      {n:"B2",nm:"Fondo",s:6,r:"4"}
+    ]},
+    {k:"C",d:"Accesorios · 3×8-10",e:[
+      {n:"C1",nm:"Pendulum",s:3,r:"8-10"},
+      {n:"C2",nm:"SL Leg Curl",s:3,r:"8-10"}
+    ]},
+    {k:"D",d:"Brazos + Core · 3×8-12",abs:1,e:[
+      {n:"D1",nm:"EZ Bar Curl",s:3,r:"8-10"},
+      {n:"D2",nm:"Overhead Tricep Ext",s:3,r:"10-12"}
+    ]}
+  ]},
+  {l:"Día 4",b:[
+    {k:"A",d:"Activación · 3×8-15",e:[
+      {n:"A1",nm:"SL Hip Thrust",s:3,r:"8-10"},
+      {n:"A2",nm:"KB Side Raises",s:3,r:"12-15"},
+      {n:"A3",nm:"Reverse Peck Deck / Máquina hombro (alterna)",s:3,r:"12-15"}
+    ]},
+    {k:"B",d:"Fuerza principal · 6×4",e:[
+      {n:"B1",nm:"Sumo Deadlift",s:6,r:"4"},
+      {n:"B2",nm:"Shoulder Press",s:6,r:"4"}
+    ]},
+    {k:"C",d:"Accesorios · 3×8-10",e:[
+      {n:"C1",nm:"Back Extension",s:3,r:"8-10"},
+      {n:"C2",nm:"SL Leg Press",s:3,r:"8-10"}
+    ]},
+    {k:"D",d:"Brazos + Core · 3×10-12",abs:1,e:[
+      {n:"D1",nm:"Curl Machine",s:3,r:"10-12"},
+      {n:"D2",nm:"Tricep Machine ⭐",s:3,r:"10-12"}
+    ]}
+  ]}
+];
+
+// state[di] = array of {done:[bool...], weight:""}
+var ST = D.map(function(day){
+  return day.b.reduce(function(a,b){return a.concat(b.e.map(function(ex){return {done:new Array(ex.s).fill(false),weight:""}}));},[]);
+});
+
+var cur = 0;
+
+function tots(di){return ST[di].reduce(function(a,e){return a+e.done.length;},0);}
+function dons(di){return ST[di].reduce(function(a,e){return a+e.done.filter(Boolean).length;},0);}
+
+function draw(){
+  // tabs
+  var th="";
+  D.forEach(function(d,i){
+    var comp=tots(i)>0&&dons(i)===tots(i);
+    th+='<button class="tab'+(i===cur?" on":"")+(comp&&i!==cur?" ":" ")+'" onclick="sw('+i+')">'+(comp&&i!==cur?"✓ ":"")+d.l+'</button>';
+  });
+  document.getElementById("tabs").innerHTML=th;
+
+  // content
+  var ch="";
+  D.forEach(function(day,di){
+    var tot=tots(di),don=dons(di),pct=tot?Math.round(don/tot*100):0;
+    ch+='<div class="day'+(di===cur?" on":"")+'" id="d'+di+'">';
+    ch+='<div class="prog"><div class="prog-row"><span>'+don+' de '+tot+' sets</span><span>'+pct+'%</span></div><div class="bar-bg"><div class="bar" style="width:'+pct+'%"></div></div></div>';
+    var gi=0;
+    day.b.forEach(function(blk){
+      ch+='<div class="blk '+blk.k+'"><div class="blk-i">'+blk.k+'</div><span class="blk-t">'+blk.d+'</span></div>';
+      blk.e.forEach(function(ex){
+        var ei=gi++,es=ST[di][ei],all=es.done.every(Boolean);
+        var dots=es.done.map(function(dn,si){return '<button class="s'+(dn?" on":"")+'" onclick="tog('+di+','+ei+','+si+')">'+(dn?"✓":si+1)+'</button>';}).join("");
+        ch+='<div class="card'+(all?" done":"")+'">';
+        ch+='<div class="card-top"><div class="ex-left"><span class="num">'+ex.n+'</span><span class="name">'+ex.nm+'</span></div><span class="badge">'+ex.r+'</span></div>';
+        ch+='<div class="card-bot"><div class="sets">'+dots+'<span class="slbl">sets</span></div>';
+        ch+='<div class="ww"><input class="wi" type="number" inputmode="decimal" placeholder="—" value="'+es.weight+'" onchange="wt('+di+','+ei+',this.value)"><span class="wlbl">kg</span></div></div>';
+        ch+='</div>';
+      });
+      if(blk.abs) ch+='<div class="abs">D3 · ABS — según indicación del entrenador</div>';
+    });
+    ch+='<button class="rst" onclick="rst('+di+')">Reiniciar '+day.l.toLowerCase()+'</button>';
+    ch+='</div>';
+  });
+  document.getElementById("cont").innerHTML=ch;
+}
+
+function sw(i){cur=i;draw();}
+function tog(di,ei,si){
+  var was=!ST[di][ei].done[si];
+  ST[di][ei].done[si]=was;
+  draw();
+  if(was) startT();
+}
+function wt(di,ei,v){ST[di][ei].weight=v;}
+function rst(di){
+  ST[di]=D[di].b.reduce(function(a,b){return a.concat(b.e.map(function(ex){return {done:new Array(ex.s).fill(false),weight:""}}));},[]);
+  draw();
+}
+
+// Timer
+var TMAX=90,tsecs=TMAX,tiv=null,CIRC=2*Math.PI*17;
+function startT(){
+  stopT();
+  tsecs=TMAX;
+  document.getElementById("tmr").className="on";
+  updT();
+  tiv=setInterval(function(){tsecs--;if(tsecs<=0){stopT();return;}updT();},1000);
+}
+function stopT(){clearInterval(tiv);tiv=null;document.getElementById("tmr").className="";}
+function updT(){
+  var m=Math.floor(tsecs/60),s=tsecs%60,lbl=m+":"+(s<10?"0":"")+s;
+  document.getElementById("tface").textContent=lbl;
+  document.getElementById("tsub").textContent="Próximo set en "+lbl;
+  document.getElementById("tarc").style.strokeDashoffset=CIRC*(tsecs/TMAX);
+}
+
+draw();
+</script>
+</body>
+</html>
