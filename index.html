@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Rutina Gina · Agosto 2026</title>
+<title>Rutina Gina · Octubre 2026</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{background:#0f0f0f;color:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;padding-bottom:80px}
@@ -61,7 +61,7 @@ header{padding:16px 16px 10px;border-bottom:1px solid #222;position:sticky;top:0
 <header>
   <div class="row">
     <span class="logo">Rutina Gina</span>
-    <span class="mes">Agosto 2026</span>
+    <span class="mes">Octubre 2026</span>
   </div>
   <div class="tabs" id="tabs"></div>
 </header>
@@ -86,105 +86,102 @@ header{padding:16px 16px 10px;border-bottom:1px solid #222;position:sticky;top:0
 
 <script>
 var D=[
-  {l:"Día 1",b:[
+  {l:"Día 1",t:"Quad + Pull/Chest",b:[
     {k:"A",d:"Activación · 3×8-12",e:[
-      {n:"A1",nm:"Front Foot Elevated Split Squat",s:3,r:"8-10"},
-      {n:"A2",nm:"Neutral Grip Pulldown",s:3,r:"8-10"},
-      {n:"A3",nm:"Cable Flies",s:3,r:"10-12"}
+      {n:"A1",nm:"Split Squat",s:3,r:"8-10"},
+      {n:"A2",nm:"High Row (máq. Amarilla)",s:3,r:"8-10"},
+      {n:"A3",nm:"Low-to-High Cable Crossover",s:3,r:"10-12"}
     ]},
-    {k:"B",d:"Fuerza principal · 6×4",e:[
-      {n:"B1",nm:"Front Squat",s:6,r:"4"},
-      {n:"B2",nm:"Chin-Ups",s:6,r:"4"}
+    {k:"B",d:"Fuerza principal · 5×4-6",e:[
+      {n:"B1",nm:"Front Squat",s:5,r:"4-6"},
+      {n:"B2",nm:"Neutral/Close Grip Pull-Up",s:5,r:"4-6"}
     ]},
     {k:"C",d:"Accesorios · 3×8-10",e:[
-      {n:"C1",nm:"Heels Elevated Squats",s:3,r:"8-10"},
-      {n:"C2",nm:"Leg Curl",s:3,r:"8-10"}
+      {n:"C1",nm:"Heels Elevated Squat",s:3,r:"8-10"},
+      {n:"C2",nm:"Lying Leg Curl",s:3,r:"8-10"}
     ]},
-    {k:"D",d:"Brazos + Core · 3×8-12",abs:1,e:[
+    {k:"D",d:"Brazos + Core",abs:"Crunches en media bola · 3×10-15",e:[
       {n:"D1",nm:"Incline DB Curl",s:3,r:"8-10"},
-      {n:"D2",nm:"Rope Press Down",s:3,r:"10-12"}
+      {n:"D2",nm:"Rope Pressdown",s:3,r:"10-12"}
     ]}
   ]},
-  {l:"Día 2",b:[
+  {l:"Día 2",t:"Posterior + Push/Pull",b:[
     {k:"A",d:"Activación · 3×8-10",e:[
-      {n:"A1",nm:"King Deadlift",s:3,r:"8-10"},
+      {n:"A1",nm:"RDL Unilateral",s:3,r:"8-10"},
       {n:"A2",nm:"Incline DB Press",s:3,r:"8-10"},
-      {n:"A3",nm:"T-Bar Row (agarre estrecho)",s:3,r:"8-10"}
+      {n:"A3",nm:"T-Bar Row",s:3,r:"8-10"}
     ]},
-    {k:"B",d:"Fuerza principal · 6×4-8",e:[
-      {n:"B1",nm:"RDL",s:6,r:"4"},
-      {n:"B2",nm:"DB Row",s:6,r:"8"}
+    {k:"B",d:"Fuerza principal · 5×4-6",e:[
+      {n:"B1",nm:"RDL",s:5,r:"4-6"},
+      {n:"B2",nm:"One-Arm DB Row",s:4,r:"6-8"}
     ]},
-    {k:"C",d:"Accesorios · 3×5-15",e:[
-      {n:"C1",nm:"Nordic Curl",s:3,r:"5-6"},
-      {n:"C2",nm:"Leg Extension",s:3,r:"12-15"},
-      {n:"C3",nm:"Peck Deck Flies",s:3,r:"12-15"}
+    {k:"C",d:"Accesorios · 3×5-12",e:[
+      {n:"C1",nm:"Nordic Curl",s:3,r:"5-8"},
+      {n:"C2",nm:"Leg Extension",s:3,r:"10-12"},
+      {n:"C3",nm:"Pec Deck / Cable Fly",s:3,r:"10-12"}
     ]},
-    {k:"D",d:"Brazos + Core · 3×8-15",abs:1,e:[
+    {k:"D",d:"Brazos + Core",abs:"Lying Leg Raises · 3×10-15",e:[
       {n:"D1",nm:"Hammer Curl",s:3,r:"8-10"},
-      {n:"D2",nm:"Close Grip Push Up",s:3,r:"10-15"}
+      {n:"D2",nm:"Diamond Push-Up",s:3,r:"AMRAP-1"}
     ]}
   ]},
-  {l:"Día 3",b:[
+  {l:"Día 3",t:"Quad + Vertical Upper",b:[
     {k:"A",d:"Activación · 3×8-12",e:[
-      {n:"A1",nm:"Reverse Lunge",s:3,r:"8-10"},
-      {n:"A2",nm:"Cross Over",s:3,r:"10-12"},
-      {n:"A3",nm:"Pullover",s:3,r:"10-12"}
+      {n:"A1",nm:"Bulgarian Squat",s:3,r:"8-10"},
+      {n:"A2",nm:"Cable Crossover",s:3,r:"10-12"},
+      {n:"A3",nm:"Pullover Polea",s:3,r:"10-12"}
     ]},
-    {k:"B",d:"Fuerza principal · 6×4",e:[
-      {n:"B1",nm:"Back Squat",s:6,r:"4"},
-      {n:"B2",nm:"Fondo",s:6,r:"4"}
+    {k:"B",d:"Fuerza principal · 5×4-6",e:[
+      {n:"B1",nm:"Squat",s:5,r:"4-6"},
+      {n:"B2",nm:"Dips",s:5,r:"4-6"}
     ]},
     {k:"C",d:"Accesorios · 3×8-10",e:[
-      {n:"C1",nm:"Pendulum",s:3,r:"8-10"},
-      {n:"C2",nm:"SL Leg Curl",s:3,r:"8-10"}
+      {n:"C1",nm:"Pendulum Squat",s:3,r:"8-10"},
+      {n:"C2",nm:"Single-Leg Curl",s:3,r:"8-10"}
     ]},
-    {k:"D",d:"Brazos + Core · 3×8-12",abs:1,e:[
-      {n:"D1",nm:"EZ Bar Curl",s:3,r:"8-10"},
-      {n:"D2",nm:"Overhead Tricep Ext",s:3,r:"10-12"}
+    {k:"D",d:"Brazos + Core",abs:"Crunches en media bola · 3×10-15",e:[
+      {n:"D1",nm:"EZ Curl",s:3,r:"8-10"},
+      {n:"D2",nm:"Overhead Cable Triceps Extension",s:3,r:"8-10"}
     ]}
   ]},
-  {l:"Día 4",b:[
+  {l:"Día 4",t:"Glute/Ham + Shoulders",b:[
     {k:"A",d:"Activación · 3×8-15",e:[
-      {n:"A1",nm:"SL Hip Thrust",s:3,r:"8-10"},
-      {n:"A2",nm:"KB Side Raises",s:3,r:"12-15"},
-      {n:"A3",nm:"Reverse Peck Deck / Máquina hombro (alterna)",s:3,r:"12-15"}
+      {n:"A1",nm:"Single-Leg Hip Thrust",s:3,r:"8-10"},
+      {n:"A2",nm:"Cable Lateral Raise",s:3,r:"12-15"},
+      {n:"A3",nm:"Reverse Pec Deck",s:3,r:"12-15"}
     ]},
-    {k:"B",d:"Fuerza principal · 6×4",e:[
-      {n:"B1",nm:"Sumo Deadlift",s:6,r:"4"},
-      {n:"B2",nm:"Shoulder Press",s:6,r:"4"}
+    {k:"B",d:"Fuerza principal · 5×4-6",e:[
+      {n:"B1",nm:"Sumo Deadlift",s:5,r:"4-6"},
+      {n:"B2",nm:"DB / Máquina Shoulder Press",s:5,r:"4-6"}
     ]},
     {k:"C",d:"Accesorios · 3×8-10",e:[
       {n:"C1",nm:"Back Extension",s:3,r:"8-10"},
-      {n:"C2",nm:"SL Leg Press",s:3,r:"8-10"}
+      {n:"C2",nm:"Single-Leg Press",s:3,r:"8-10"}
     ]},
-    {k:"D",d:"Brazos + Core · 3×10-12",abs:1,e:[
-      {n:"D1",nm:"Curl Machine",s:3,r:"10-12"},
-      {n:"D2",nm:"Tricep Machine ⭐",s:3,r:"10-12"}
+    {k:"D",d:"Brazos + Core",abs:"Lying Leg Raises · 3×10-15",e:[
+      {n:"D1",nm:"Predicador Máquina Curl",s:3,r:"8-10"},
+      {n:"D2",nm:"Tríceps Máquina",s:3,r:"8-10"}
     ]}
   ]}
 ];
 
-// state[di] = array of {done:[bool...], weight:""}
-var ST = D.map(function(day){
+var ST=D.map(function(day){
   return day.b.reduce(function(a,b){return a.concat(b.e.map(function(ex){return {done:new Array(ex.s).fill(false),weight:""}}));},[]);
 });
 
-var cur = 0;
+var cur=0;
 
 function tots(di){return ST[di].reduce(function(a,e){return a+e.done.length;},0);}
 function dons(di){return ST[di].reduce(function(a,e){return a+e.done.filter(Boolean).length;},0);}
 
 function draw(){
-  // tabs
   var th="";
   D.forEach(function(d,i){
     var comp=tots(i)>0&&dons(i)===tots(i);
-    th+='<button class="tab'+(i===cur?" on":"")+(comp&&i!==cur?" ":" ")+'" onclick="sw('+i+')">'+(comp&&i!==cur?"✓ ":"")+d.l+'</button>';
+    th+='<button class="tab'+(i===cur?" on":"")+'" onclick="sw('+i+')">'+(comp&&i!==cur?"✓ ":"")+d.l+'</button>';
   });
   document.getElementById("tabs").innerHTML=th;
 
-  // content
   var ch="";
   D.forEach(function(day,di){
     var tot=tots(di),don=dons(di),pct=tot?Math.round(don/tot*100):0;
@@ -202,7 +199,7 @@ function draw(){
         ch+='<div class="ww"><input class="wi" type="number" inputmode="decimal" placeholder="—" value="'+es.weight+'" onchange="wt('+di+','+ei+',this.value)"><span class="wlbl">kg</span></div></div>';
         ch+='</div>';
       });
-      if(blk.abs) ch+='<div class="abs">D3 · ABS — según indicación del entrenador</div>';
+      if(blk.abs) ch+='<div class="abs">D3 · ABS — '+blk.abs+'</div>';
     });
     ch+='<button class="rst" onclick="rst('+di+')">Reiniciar '+day.l.toLowerCase()+'</button>';
     ch+='</div>';
@@ -223,11 +220,9 @@ function rst(di){
   draw();
 }
 
-// Timer
 var TMAX=90,tsecs=TMAX,tiv=null,CIRC=2*Math.PI*17;
 function startT(){
-  stopT();
-  tsecs=TMAX;
+  stopT();tsecs=TMAX;
   document.getElementById("tmr").className="on";
   updT();
   tiv=setInterval(function(){tsecs--;if(tsecs<=0){stopT();return;}updT();},1000);
